@@ -54,7 +54,8 @@ button::-moz-focusring, [type="button"]::-moz-focusring, [type="reset"]::-moz-fo
 [type="search"] { -webkit-appearance: textfield; /*outline-offset: -1px;*/ }
 [type="search"]::-webkit-search-decoration { -webkit-appearance: none;}
 ::-webkit-file-upload-button { -webkit-appearance:button; font: inherit; }
-:focus { outline: 0; }
+:focus, :active{ outline: 0; -webkit-tap-highlight-color: transparent; -ms-touch-action: manipulation; touch-action: manipulation;}
+
 input:focus, a:focus, button:focus, textarea:focus { /*outline-color: gray; outline-offset: -1px; outline-style: dotted; outline-width: 1px;*/}
 button::-moz-focusring { /*outline-color: gray; outline-offset: -1px; outline-style: dotted; outline-width: 1px;*/}
 button::-moz-focus-inner{  }
