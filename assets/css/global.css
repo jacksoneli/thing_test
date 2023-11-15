@@ -1,0 +1,15 @@
+/*******************************************************************************/
+/****** global.css : 모든 css파일들을 import ******/
+/*******************************************************************************/
+
+@charset "utf-8";
+
+/* style */
+@import url("./style/normalize_jackson.css"); /*크로스 브라우징을 위한 리셋*/
+@import url("./style/default.css"); /*일반적인 리셋, 서체, 기본컬러, clearfix 등*/
+@import url("./style/common.css"); /*공통으로 쓰는 기능들의 스타일(헤더, 푸터 등)*/
+@import url("./style/style.css"); /*각 페이지들의 스타일*/
+
+/* system(자바스크립트 소스 관련) */
+@import url("./system/slick.css"); /*slick 배너슬라이더*/
+

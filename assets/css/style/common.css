@@ -1,0 +1,135 @@
+/*******************************************************************************/
+/****** common.css : 공통으로 쓰이는 기능들의 스타일(헤더, 푸터, 게시판, 버튼 등) ******/
+/*******************************************************************************/
+
+
+@charset "utf-8";
+
+/**** 레이아웃 ****/
+.center_wrap{max-width: 750px; height: 100%; margin: 0 auto; position: relative;}
+.vertical_center_wrap{height: 100%; display: flex; align-items: center;}
+.pd20{padding: 0 20px;}
+
+/**** 헤더 ****/
+.header_wrap{}
+.header_wrap .header{height: 44px; position: relative;}
+.header_wrap .header .left{position: absolute; left: 0; top: 0;}
+.header_wrap .header .left .btn1{margin-top: 9px; margin-left: 12px;}
+.header_wrap .header .left .btn1 img{width: 24px;}
+.header_wrap .header .center{text-align: center;}
+.header_wrap .header .center h2{line-height: 44px; color: #565656; font-weight: 700;}
+.header_wrap .header .right{position: absolute; right: 0; top: 0;}
+.header_wrap .header .right .r_btn{font-size: 14px; color: #B1B4B9; line-height: 20px; margin-top: 12px; margin-right: 20px; cursor: pointer;}
+
+
+/**** 헤더와 컨텐츠의 위치 ****/
+.vertical_flex_wrap{height: 100%; display: flex; flex-direction: column;}
+.vertical_flex_wrap .header_wrap{}
+.vertical_flex_wrap .contents{height: 100%; flex-grow: 0; overflow-x: hidden; overflow-y: auto;}
+
+
+/**** 하단 영역 ****/
+/* 일반 하단영역 */
+.bottom_position_wrap{position: absolute; left: 0; bottom: 0; padding: 0 20px 24px; width: 100%; text-align: center;}
+.bottom_position_wrap article{margin-top: 8px;}
+.bottom_position_wrap article:nth-of-type(1){margin-top: 0;}
+
+/* 고정된 하단 영역(스크롤해도 화면을 따라다님) ->아이폰에서 키보드 띄울 때 이슈 있으므로 되도록 쓰지 말것 */
+.bottom_fix_wrap{position: fixed; left: 0; bottom: 24px; padding: 0 20px; width: 100%; text-align: center;}
+.bottom_fix_wrap article{margin-top: 8px;}
+.bottom_fix_wrap article:nth-of-type(1){margin-top: 0;}
+
+
+/**** 버튼 ****/
+.btn{text-align: center; border-radius: 8px; width: 100%; font-weight: 500;}
+.btn.h60{font-size: 18px; height: 60px; line-height: 60px; padding: 0 28px;}
+.btn.h52{font-size: 16px; height: 52px; line-height: 52px; padding: 0 24px;}
+.btn.h44{font-size: 14px; height: 44px; line-height: 44px; padding: 0 20px;}
+.btn.h36{font-size: 12px; height: 36px; line-height: 36px; padding: 0 16px;}
+.btn.orange{background: #F5822C; color: #fff;}
+.btn.orange:active{background: #532604;}
+.btn.white{background: #fff; color: #565656; border: 1px solid #EBEBEB;}
+.btn.white:active{background: #EBEBEB; border: none;}
+.btn.outline{color: #565656; border: 1px solid #EBEBEB;}
+.btn.outline:active{background: #EBEBEB; border: none;}
+.btn.text{color: #565656;}
+.btn.white_text{color: #fff;}
+.btn.text:active{background: #EBEBEB;}
+.btn:disabled{background: #F3F3F3; color: #DCDCDC;}
+.btn:disabled:active{background: #F3F3F3; color: #DCDCDC;}
+.btn.text:disabled{color: #DCDCDC;}
+.btn.text:disabled:active{color: #DCDCDC;}
+
+
+/**** 입력박스 ****/
+/* 일반 입력박스 */
+.input_box{position: relative; display: flex;}
+.input_box.h52{height: 52px; padding: 0 24px;}
+.input_box.h44{height: 44px; padding: 0 20px;}
+.input_box input{width: 100%; height: 100%; caret-color: #F5822C; color: #565656; border: 0;}
+.input_box .bg{position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: #F3F3F3; border-radius: 8px; z-index: -1;}
+.input_box.h52 input{font-size: 16px; line-height: 52px;}
+.input_box.h44 input{font-size: 14px; line-height: 44px;}
+.input_box input[type=password]{font-size: 20px;}
+.input_box input:disabled{color: #DCDCDC;}
+.input_box input:focus ~ .bg{background: #FEF6F0;}
+.input_box input:disabled ~ .bg{background: #F3F3F3}
+.input_box input:disabled{color: #DCDCDC;}
+::placeholder{color: #B5B5B5;}
+.input_box.h52 input[type=password]::placeholder{font-size: 16px;}
+.input_box.h44 input[type=password]::placeholder{font-size: 14px;}
+
+/* 아이콘이 함께 있는 입력박스 */
+.input_box.red .bg{background: #FFF4F4;}
+.input_box.red input{color: #FC5555;}
+.input_box.green .bg{background: #EEF9F6;}
+.input_box .ico{height: 100%; display: flex; align-items: center; margin-left: 8px;}
+.input_box .ico img{width: 20px; height: 20px;}
+
+/* 버튼이 함께 있는 입력박스 */
+.input_box.w_btn{padding-right: 4px;}
+.input_box.w_btn input{width: auto; flex-grow: 1;}
+.input_box .btn_area{height: 100%; display: flex; align-items: center; margin-left: 8px; width: auto;}
+.input_box .btn_area .btn{width: auto;}
+
+/* 입력박스와 주의사항이 함께 있는 형태(비밀번호 재설정 페이지 등) */
+.input_wrap{padding: 20px 20px 0;}
+.input_set{margin-top: 20px; text-align: left;}
+.input_set:nth-of-type(1){margin-top: 0;}
+.input_set .tit{font-size: 14px; line-height: 20px; color: #565656;}
+.input_set.tit_n_input .input_area{margin-top: 8px;}
+.input_set .txt_area{margin-top: 8px;}
+.input_set .txt_area p{margin-top: 8px; padding-left: 20px; font-size: 12px; line-height: 16px; color: #565656; background: url(../../images/icon/check.svg) no-repeat 0 50% / 16px;}
+.input_set .txt_area p:nth-of-type(1){margin-top: 0;}
+.input_set .txt_area p.green{color: #43BC5C; background-image: url(../../images/icon/check_green.svg);}
+.input_set .txt_area p.red{color: #FC5555; background-image: url(../../images/icon/check_red.svg);}
+
+
+/**** 팝업 ****/
+.modal_wrap{position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 100;}
+.dim{position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.25);}
+.popup{position: absolute; left: 20px; right: 20px; top: 50%; transform: translateY(-50%); z-index: 110; background: #fff; padding: 28px 40px; border-radius: 16px; text-align: center; color: #565656;}
+.popup h3{font-size: 16px; font-weight: 700;}
+.popup .txt{margin-top: 8px; font-size: 14px; line-height: 20px; font-weight: 400;}
+.popup .txt .orange{color: #F5822C;}
+.popup .input_area{margin-top: 20px;}
+.popup .btn_area{margin-top: 28px;}
+.popup .btn_area article{display: flex; gap: 0 8px;}
+.popup .btn_area article:nth-of-type(1){}
+
+
+/**** 체크박스 ****/
+/* 일반 체크박스 */
+.chk_list{display: flex; gap: 0 12px; align-items: center;}
+.chk_list .chk{width: 24px; height: 24px; background: url(../../images/icon/chk_box_off.svg) no-repeat 0 0 / 24px;}
+.chk_list .chk.on{background-image: url(../../images/icon/chk_box_on.svg);}
+.chk_list .txt{font-size: 12px; line-height: 16px; font-weight: 500; color: #565656;}
+.chk_list .txt .orange{color: #F5822C;}
+.chk_list .txt.big{font-size: 14px; line-height: 20px; font-weight: 700;}
+
+
+
+
+
+
+
