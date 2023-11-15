@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="Generator" content="Thing">
+  <meta name="Keywords" content="Thing">
+  <meta name="Description" content="Thing">
+    
+	<title>Thing</title>
+	
+	<link rel="stylesheet" href="../../assets/css/global.css">
+	<script src="../../assets/js/jquery-3.7.1.min.js"></script>
+	<script src="../../assets/js/ui.js"></script>
+</head>
+<body>
+
+<div class="whole_wrap">
+  <div class="center_wrap">
+
+    <div class="vertical_flex_wrap">
+      <!--헤더-->
+      <div class="header_wrap">
+        <div class="header clearfix">
+          <div class="right">
+            <span class="r_btn js_skip">건너뛰기</span>
+          </div>
+        </div>
+      </div>
+      <!--//헤더-->
+      <!--컨텐츠-->
+      <div class="contents">
+        <div class="full_slier_wrap">
+          <div class="js_slick_1">
+            <!--슬라이드1-->
+            <div>
+              <div class="cont">
+                <div class="upper">
+                  <div class="txt_area">
+                    <div class="tit">마음 스트레스 경험<span class="orange">.</span></div>
+                    <div class="txt">가끔 이유없이 우울하거나<br>소중한 관계가 망가졌던 경험이 있으신가요?<br>마음도 가끔 도움이 필요해요.</div>
+                  </div>
+                </div>
+                <div class="lower">
+                  <div class="img_area">
+                    <img src="https://dummyimage.com/360x320/ddd/000&text=img1" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--//슬라이드1-->
+            <!--슬라이드2-->
+            <div>
+              <div class="cont">
+                <div class="upper">
+                  <div class="txt_area">
+                    <div class="tit">스토리로 하는<br>마음관리<span class="orange">.</span></div>
+                    <div class="txt">thing은 스토리 기반 콘텐츠로<br>마음 건강 관리를 도와줘요.</div>
+                  </div>
+                </div>
+                <div class="lower">
+                  <div class="img_area">
+                    <img src="https://dummyimage.com/360x320/fdd/000&text=img2" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--//슬라이드2-->
+            <!--슬라이드3-->
+            <div>
+              <div class="cont">
+                <div class="upper">
+                  <div class="txt_area">
+                    <div class="tit">생각을 움직이는 좋은 습관<br><span class="orange">thing.</span></div>
+                    <div class="txt">마음 관리의 시작을<br>thing과 함께 해보세요.</div>
+                  </div>
+                </div>
+                <div class="lower">
+                  <div class="img_area">
+                    <img src="https://dummyimage.com/360x320/dfd/000&text=img3" alt="">
+                  </div>
+                  <div class="btn_area">
+                    <button class="btn orange h52">시작하기</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--//슬라이드3-->
+          </div>
+        </div>
+      </div>
+      <!--//컨텐츠-->
+    </div>
+
+    <script src="../../assets/js/slick.min.js"></script>
+    <script>
+    // 슬라이더
+    $('.js_slick_1').slick({
+      dots: true,
+      arrows: false,
+      infinite: false,
+      edgeFriction: 0,
+    });
+    // '건너뛰기' 버튼 클릭시 마지막 페이지로
+    $('.js_skip').on('click', function() {
+      $('.js_slick_1').slick('slickGoTo',3)
+    });
+    // 마지막 페이지에서 '건너뛰기' 버튼 없애기
+    $('.js_slick_1').on('afterChange', function(event, slick, direction){
+      let total_i = $('.slick-slide').length
+      let current_i = $('.js_slick_1').slick('slickCurrentSlide')
+      if(current_i == total_i - 1){
+        $('.js_skip').addClass('hide');
+      }else{
+        $('.js_skip').removeClass('hide');
+      }
+    });
+    </script>
+
+  </div>
+</div>
+
+</body>
+</html>
