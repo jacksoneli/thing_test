@@ -23,37 +23,111 @@
 
 <div class="whole_wrap">
   <div class="center_wrap">
+    <div class="vertical_flex_wrap">
 
-    <!----헤더---->
-    <div class="header_wrap">
-      <div class="header">
-        <div class="left">
-          <a class="btn1" href="#null"><img src="../../assets/images/icon/arrow_l.svg" alt="뒤로"></a>
+      <!----헤더---->
+      <div class="header_wrap">
+        <!--일반 컨텐츠의 헤더-->
+        <div class="header">
+          <div class="left">
+            <a class="btn1" href="#null"><img src="../../assets/images/icon/arrow_l.svg" alt="뒤로"></a>
+            <a class="btn1" href="#null"><img src="../../assets/images/icon/x.svg"></a>
+          </div>
+          <div class="center">
+            <h2>아이디</h2>
+          </div>
+          <div class="right">
+            <span class="r_btn">건너뛰기</span>
+          </div> 
         </div>
-        <div class="center">
-          <h2>아이디</h2>
+        <!--//일반 컨텐츠의 헤더-->
+        <!--진행바가 있는 헤더-->
+        <div class="header progress">
+          <div class="left">
+            <a class="btn1" href="#null"><img src="../../assets/images/icon/x.svg"></a>
+          </div>
+          <div class="right">
+            <span>건너뛰기</span>
+          </div>
+          <div class="progress_bar" style="width: 30%;"><!--width 값에 따라 주황색 진행바 길이 결정됨-->
+          </div> 
         </div>
-        <div class="right">
-          <span class="r_btn">건너뛰기</span>
+        <!--//진행바가 있는 헤더-->
+        <!--홈 헤더-->
+        <div class="header home_header"><!--class white 추가하면 로고가 흰색이 됨-->
+          <div class="left">
+            <a class="logo" href="#null"><span class="invisible">thing 로고</span></a>
+          </div>
+          <div class="right">
+            <div class="my_box_area">
+              <div class="my_box"><!--이 영역이 모달팝업의 dim을 뚫고 나오게 하려면 class out_dim을 추가합니다.-->
+                <a class="point js_ellipsis_100000 js_plus_count" href="#null">12</a><!--십만단위 초과인 경우 말줄임표 나오는 스크립트 js_ellipsis_100000--><!--더해질 숫자로 카운트하는 스크립트 js_plus_count : 현재는 1000포인트 추가되는 것으로 설정해놨습니다-->
+                <a class="cash js_ellipsis_100000" href="#null">123,456,789</a><!--십만단위 초과인 경우 말줄임표 나오는 스크립트 js_ellipsis_100000-->
+              </div>
+            </div>
+            <div class="alarm">
+              <a class="on" href="#null"><!--활성화시 class on-->
+                <span class="invisible">알림</span>
+              </a>
+            </div>
+          </div>
         </div>
+        <!--홈 헤더-->
       </div>
+      <!----//헤더---->
+
+      <!----컨텐츠---->
+      <div class="contents">
+
+        <!--일반 하단영역-->
+        <div class="page_lower_wrap">
+          <p><span class="color_orange">[다음]</span> 버튼을 누르면 자동으로 저장됩니다.</p>
+          <div class="btns_wrap">
+            <article>
+              <button class="btn h52 orange" disabled>1</button>
+            </article>
+            <article>
+              <button class="btn h52 orange">2</button>
+            </article>
+          </div>
+        </div>
+        <!--//일반 하단영역-->
+
+        <!----하단에 붙어있는 하단영역---->
+        <div class="bottom_position_wrap">
+          <article>
+            <button class="btn h52 orange" disabled>1</button>
+          </article>
+        </div> 
+        <!----하단에 붙어있는 하단영역---->
+
+      </div>
+      <!----//컨텐츠---->
+
+      <!----하단 플로팅 네비바(스크롤해도 화면을 따라다님)---->
+      <div class="bottom_floating_wrap">
+        <nav class="bottom_nav_01">
+          <article>
+            <a class="bnt_01 on dot" href="#null">홈</a><!--활성화시 class on--><!--붉은 점 추가는 class dot-->
+          </article>
+          <article>
+            <a class="bnt_02" href="#null">리포트</a>
+          </article>
+          <article>
+            <a class="bnt_03" href="#null">콘텐츠</a>
+          </article>
+          <article>
+            <a class="bnt_04" href="#null">상담</a>
+          </article>
+          <article>
+            <a class="bnt_05" href="#null">마이페이지</a>
+          </article>
+        </nav>
+      </div>
+      <!----//하단 플로팅 네비바(스크롤해도 화면을 따라다님)---->
     </div>
-    <!----//헤더---->
-
-    <!----컨텐츠---->
-    <div class="contents">
-
-    </div>
-    <!----//컨텐츠---->
-
-    <!----하단 고정영역---->
-    <div class="bottom_fix">
-  
-    </div>
-    <!----//하단 고정영역---->
-
   </div>
 </div>
-
+ 
 </body>
 </html>

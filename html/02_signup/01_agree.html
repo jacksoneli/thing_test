@@ -23,8 +23,8 @@
 
 <div class="whole_wrap">
   <div class="center_wrap">
-
     <div class="vertical_flex_wrap">
+
       <!--헤더-->
       <div class="header_wrap">
         <div class="header">
@@ -37,25 +37,26 @@
         </div>
       </div>
       <!--//헤더-->
+
       <!--컨텐츠-->
       <div class="contents">
         <div class="vertical_center_wrap">
           <div class="agree pd20">
-            <div class="img_area"><img src="https://dummyimage.com/60x60/eee/333&text=test" alt=""></div>
+            <div class="img_area"><img src="../../assets/images/thing_noti.svg" alt=""></div>
             <div class="tit">회원가입을 위해 약관동의를 해주세요</div>
             <div class="chk_area">
               <div class="upper">
                 <div class="chk_list">
-                  <div class="chk js_on"></div><!--클릭시 class on 토글되며 이미지 바뀜-->
-                  <div class="txt big">모두 동의합니다</div>
+                    <input id="agree_all" type="checkbox">
+                    <label class="big" for="agree_all">전체 약관에 동의합니다.</label>
                 </div>
               </div>
               <div class="lower">
                 <div class="chk_n_btn">
                   <article>
                     <div class="chk_list">
-                      <div class="chk js_on"></div><!--클릭시 class on 토글되며 이미지 바뀜-->
-                      <div class="txt">이용약관 <span class="orange">(필수)</span></div>
+                      <input id="agree_01" type="checkbox">
+                      <label for="agree_01">이용약관</label>
                     </div>
                     <div class="right">
                       <a href="#null"><img src="../../assets/images/icon/arrow_r.svg" alt=""></a>
@@ -63,8 +64,8 @@
                   </article>
                   <article>
                     <div class="chk_list">
-                      <div class="chk js_on"></div><!--클릭시 class on 토글되며 이미지 바뀜-->
-                      <div class="txt">개인정보 처리방침 <span class="orange">(필수)</span></div>
+                      <input id="agree_02" type="checkbox">
+                      <label for="agree_02">개인정보 처리방침 <span class="color_orange">(필수)</span></label>
                     </div>
                     <div class="right">
                       <a href="#null"><img src="../../assets/images/icon/arrow_r.svg" alt=""></a>
@@ -72,8 +73,8 @@
                   </article>
                   <article>
                     <div class="chk_list">
-                      <div class="chk js_on"></div><!--클릭시 class on 토글되며 이미지 바뀜-->
-                      <div class="txt">건강민감정보 수집 동의 <span class="orange">(필수)</span></div>
+                      <input id="agree_03" type="checkbox">
+                      <label for="agree_03">건강민감정보 수집 동의 <span class="color_orange">(필수)</span></label>
                     </div>
                     <div class="right">
                       <a href="#null"><img src="../../assets/images/icon/arrow_r.svg" alt=""></a>
@@ -81,8 +82,8 @@
                   </article>
                   <article>
                     <div class="chk_list">
-                      <div class="chk js_on"></div><!--클릭시 class on 토글되며 이미지 바뀜-->
-                      <div class="txt">마케팅 정보 수신 동의 (선택)</div>
+                      <input id="agree_04" type="checkbox">
+                      <label for="agree_04">마케팅 정보 수신 동의 (선택)</label>
                     </div>
                     <div class="right">
                       <a href="#null"><img src="../../assets/images/icon/arrow_r.svg" alt=""></a>
@@ -99,8 +100,9 @@
           </article>
         </div>
       </div>
-    </div>
+      <!--//컨텐츠-->
 
+    </div>
   </div>
 </div>
 

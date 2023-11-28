@@ -73,15 +73,24 @@ button.kakao{background-image: url(../../images/icon/logo=kakao.svg); background
 
 
 /**** 회원가입(02_signup 폴더) ****/
-/* 본인인증 */
+/* 본인인증, 기업회원인증 */
 .certify{text-align: center;}
 .certify .img_area{margin-top: 31.25vh; display: flex; justify-content: center; align-items: center; gap: 0 15px;}
 .certify .txt_area{margin-top: 16px; color: #565656;}
-.certify .txt_area .tit{font-size: 16px; font-weight: 700;}
-.certify .txt_area .txt{margin-top: 8px; font-size: 14px; line-height: 20px; font-weight: 400;}
+.certify .txt_area .tit{font-size: 16px; font-weight: 700; line-height: 28px;}
+.certify .txt_area .txt{margin-top: 8px; font-size: 14px; line-height: 20px;}
 .certify .txt_area .txt span{color: #F5822C;}
 .certify .btn_area{margin-top: 20px;}
 .certify .btn_area .btn{width: 208px;}
+.certify.company .img_area{margin-top: 20vh;}
+.certify.company .img_area .logo img{width: 128px;}
+.certify.company .img_area .building img{width: 60px;}
+.certify.company .txt_area{margin-top: 8px;}
+.certify.company .txt_area .txt{line-height: 24px;}
+.certify.company .btn_area{margin-top: 28px;}
+.bg_bottom{background: url(https://dummyimage.com/360x280/eee/555&text=test) no-repeat 50% bottom / 100%;}
+.bg_bottom.done{background-image: url(https://dummyimage.com/360x280/ffe/555&text=test);}
+.bg_bottom.character_01{background-image: url(https://dummyimage.com/360x280/fef/555&text=test); background-position: left 50% bottom -20px;}
 
 /* 약관동의 */
 .agree{width: 100%; padding-bottom: 22px;}
@@ -105,6 +114,133 @@ button.kakao{background-image: url(../../images/icon/logo=kakao.svg); background
 .terms ul li{display: flex;}
 .terms ul li .num{}
 .terms ul li .cont{margin-left: 5px;}
+
+/* 닉네임 */
+.nickname{text-align: center;}
+.nickname .img_area{display: flex; justify-content: center;}
+.nickname .img_area .img_box{display: flex; width: 60px; height: 60px; border-radius: 12px; background: #FEF6F0; justify-content: center; align-items: center;}
+.nickname .tit{margin-top: 8px; font-size: 16px; font-weight: 700;}
+.nickname .txt{margin-top: 8px; font-size: 14px; line-height: 20px;}
+
+
+/**** 무드트래킹(03_mood_tracking 폴더) ****/
+/* 감정선택 팝업 */
+.popup.emotion{padding: 40px 28px 32px;}
+.popup.emotion h3{margin-top: 8px; font-size: 20px; line-height: 28px; font-weight: 700;}
+.popup.emotion .date{margin-top: 4px; font-size: 14px; line-height: 20px;}
+.emo_box_wrap{margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px;}
+.emo_box_wrap article{}
+.emo_box_wrap article input[type=radio]{display: none;}
+.emo_box_wrap article label{display: block; background: #FEF7C4; border-radius: 12px; position: relative;}
+.emo_box_wrap article input[type=radio]:checked ~ label::after{content: ''; position: absolute; width: 100%; height: 100%; left: 0; top: 0; border: 2px solid #F5822C; border-radius: 12px;}
+.emo_box_wrap article label span{display: block;}
+.emo_box_wrap article label .upper{}
+.emo_box_wrap article label .upper img{}
+.emo_box_wrap article label .lower{margin-top: 2px; font-size: 12px; line-height: 16px; font-weight: 500;}
+.popup.emotion .btn_wrap{margin-top: 20px;}
+
+/* 강도선택 팝업 */
+.popup.emotion.level{padding-top: 80px; background: #FFEF7D;}
+.popup.emotion.level .back{position: absolute; top: 16px; left: 12px;}
+.popup.emotion.level .img_wrap{}
+.popup.emotion.level .img_wrap img{}
+.popup.emotion.level h3{margin-top: 12px;}
+.level_wrap{margin-top: 24px; display: flex; justify-content: center; gap: 0 6px;}
+.level_wrap article{}
+.level_wrap article input[type=radio]{display: none;}
+.level_wrap article label{display: inline-block;}
+.level_wrap article label span{display: inline-block;}
+.level_wrap article label .level_set{position: relative;}
+.level_wrap article label .level_set .num{width: 32px; height: 32px; background: #fff; border-radius: 50%; font-size: 16px; line-height: 32px; font-weight: 700;}
+.level_wrap article input:checked ~ label .level_set .num{background: #F5822C; color: #fff;}
+.level_wrap article label .level_set .txt_box{position: absolute; left: 50%; transform: translateX(-50%); top: 48px; padding: 10px 16px; background: #F5822C; border-radius: 8px; white-space: nowrap; font-size: 14px; line-height: 20px; color: #fff; display: none;}
+.level_wrap article label .level_set .txt_box::before{content: ''; width: 14px; height: 12px; background: url(../../images/bubble_triangle.svg); position: absolute; left: 50%; transform: translateX(-50%); top: -12px;}
+.level_wrap article input:checked ~ label .level_set .txt_box{display: inline-block;}
+.popup.emotion.level .noti_box_wrap{margin-top: 110px;}
+.popup .point_box{display: inline-block; margin-top: 12px; border: 1px solid #EBEBEB; border-radius: 14px; padding: 4px 8px 4px 28px; font-size: 12px; line-height: 20px; font-weight: 700; background: url(../../images/icon/point.svg) no-repeat 4px 50% / 20px;}
+
+
+/**** 척도검사(04_test 폴더) ****/
+/* 시작하기 */
+.test_start{margin-top: calc(50vh - 300px); color: #565656; font-size: 14px; line-height: 20px;}
+.test_start .upper{text-align: center;}
+.test_start .upper .txt1{}
+.test_start .upper .txt2{margin-top: 4px; font-size: 20px; line-height: 28px;}
+.test_start .upper .txt3{margin-top: 16px;}
+.test_start .mid{margin-top: 40px; text-align: center;}
+.test_start .mid .img_area{}
+.test_start .lower_wrap{margin-top: 28px; display: flex; justify-content: center;}
+.test_start .lower_wrap .lower{}
+.test_start .lower_wrap .lower .tit{font-size: 16px; font-weight: 700;}
+.test_start .lower_wrap .lower article{margin-top: 8px; padding: 4px 0 4px 36px; background: url(../../images/icon/noti_star.svg) no-repeat 0 50%;}
+.test_start .lower_wrap .lower article:nth-of-type(1){margin-top: 12px;}
+.test_start .lower_wrap .lower article.txt1{}
+.test_start .lower_wrap .lower article.txt2{background-image: url(../../images/icon/noti_ghost.svg);}
+.test_start .lower_wrap .lower article.txt3{background-image: url(../../images/icon/noti_shield.svg);}
+
+/* 그리팅 */
+.greeting{}
+.greeting .noti_wrap{margin-top: 12px;}
+.question_wrap{margin-top: 20px;}
+.question_wrap article{margin-top: 20px;}
+.question_wrap article:nth-of-type(1){margin-top: 0;}
+.question_wrap article .question{font-size: 16px; font-weight: 700;}
+.question_wrap article .answer{margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap;}
+.question_wrap article .answer .box{}
+.question_wrap article .answer .box input[type=radio]{display: none;}
+.question_wrap article .answer .box label{display: block; padding: 12px 20px; border: 1px solid #EBEBEB; border-radius: 8px; line-height: 20px; font-weight: 500;}
+.question_wrap article .answer .box input:checked ~ label{background: #FEF6F0; border-color: #F5822C;}
+
+/* 척도1 설문 */
+.survey{padding-bottom: 23px;}
+.survey .upper_wrap{margin-top: 16px;}
+.survey_question{margin-top: 24px;}
+.survey_question article{margin-top: 32px;}
+.survey_question article:nth-of-type(1){margin-top: 0;}
+.survey_question article .question{font-size: 16px; font-weight: 700;}
+.survey_question article .answer{margin-top: 8px; display: flex; justify-content: center; gap: 0 8px;}
+.survey_question article .answer .box{}
+.survey_question article .answer .box input[type=radio]{display: none;}
+.survey_question article .answer .box label{display: block; width: 55px; height: 52px; padding-top: 40px; font-size: 10px; line-height: 12px; text-align: center; background: url(../../images/icon/circle_gray.svg) no-repeat 50% 0;}
+.survey_question article .answer .box input:checked ~ label{background-image: url(../../images/icon/circle_chk_orange.svg);}
+.survey .page_lower_wrap{margin-top: 24px;}
+
+/* 척도2 시작하기 */
+.survey2{}
+.survey2 .txt_wrap{margin-top: calc(50vh - 340px); text-align: center;}
+.survey2 .txt_wrap .txt1{}
+.survey2 .txt_wrap .txt2{margin-top: 4px; font-size: 20px; line-height: 28px;}
+.survey2 .txt_wrap .txt3{margin-top: 16px;}
+.survey2 .example_wrap{margin-top: 28px; padding-top: 223px; background: url(../../images/survey2_start.svg) no-repeat 50% 0;}
+.survey2 .example_wrap .txt_boxes{width: 320px; margin: 0 auto; text-align: center;}
+.survey2 .example_wrap .txt_boxes article{display: inline-block; text-align: left; font-size: 10.5px; font-weight: 500; width: 240px; margin-top: 4px; padding: 9px 15px; border: 1px solid #EBEBEB; border-radius: 8px; background: #fff; transition: 0.4s;}
+.survey2 .example_wrap .txt_boxes article:nth-of-type(1){margin-top: 0;}
+.survey2 .example_wrap .txt_boxes article.on{width: 100%; padding: 12px 20px; background: #FEF6F0; border: 1px solid #F5822C; font-size: 14px;}
+
+/* 척도2 설문 : 선택 타입 */
+.survey2_img_wrap{margin: 20px auto 0; width: 100%; max-width: 480px;}
+.survey2_img_wrap img{width: 100%;}
+.survey_question .answer.survey2_type_1{margin-top: 20px;}
+.survey_question .answer.survey2_type_1{flex-direction: column; gap: 8px 0;}
+.survey_question .answer.survey2_type_1 .box{}
+.survey_question .answer.survey2_type_1 .box label{display: block; width: 100%; height: auto; padding: 12px 20px; font-size: 14px; line-height: 20px; text-align: left; background: #fff; border: 1px solid #EBEBEB; border-radius: 8px; font-weight: 500;}
+.survey_question .answer.survey2_type_1 .box input:checked ~ label{background: #FEF6F0; border-color: #F5822C;}
+
+/* 척도2 설문 : 우선순위 타입*/
+.survey2_type_2{margin: 16px auto 0; width: 320px;}
+.survey2_type_2 .priority_wrap{display: grid; gap: 12px; grid-template-columns: auto 140px 140px; grid-template-rows: auto 140px 140px;}
+.survey2_type_2 .priority_wrap p{line-height: 20px; font-weight: 700; text-align: center;}
+.survey2_type_2 .priority_wrap p.horizontal{position: relative; top: 4px;}
+.survey2_type_2 .priority_wrap p.vertical{display: flex; align-items: center;}
+.survey2_type_2 .priority_wrap article{margin-top: 0; width: 140px; height: 140px; border: 1px solid #B5B5B5; border-radius: 4px; display: flex; justify-content: center; align-items: center;}
+.survey2_type_2 .priority_wrap article .inner{width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;}
+.survey2_type_2 .priority_wrap article .inner::before{display: block; content: '끌어서 넣기'; border: 1px dashed #DCDCDC; border-radius: 8px; padding: 12px 20px; line-height: 20px; font-weight: 500; color: #DCDCDC;}
+.survey2_type_2 .obj_wrap{margin-top: 9px;}
+.draggable_box{display: inline-block; margin-top: 8px; margin-right: 8px; padding: 12px 20px; line-height: 20px; font-weight: 500; border: 1px solid #EBEBEB; border-radius: 8px; background: #fff;}
+.survey2_type_2 .priority_wrap article .draggable_box{margin: 0; border-color: #F5822C; background: #FEF6F0; max-width: 104px;}
+
+
+
 
 
 

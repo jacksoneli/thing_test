@@ -10,14 +10,15 @@
 @font-face {font-family: 'Pretendard'; font-style: normal; font-weight: 400; src: url("../../fonts/Pretendard-Regular.ttf") format("truetype");}
 @font-face {font-family: 'Pretendard'; font-style: normal; font-weight: 500; src: url("../../fonts/Pretendard-Medium.ttf") format("truetype");}
 @font-face {font-family: 'Pretendard'; font-style: normal; font-weight: 700; src: url("../../fonts/Pretendard-Bold.ttf") format("truetype");}
-body{font-family:'Pretendard', NanumGothic, "나눔고딕", 'Nanum Gothic', Nanum Gothic, dotum, '돋움', gulim, '굴림', Tahoma, sans-serif; color:#242424; font-size:14px; font-weight: 400;}
+body{font-family:'Pretendard', NanumGothic, "나눔고딕", 'Nanum Gothic', Nanum Gothic, dotum, '돋움', gulim, '굴림', Tahoma, sans-serif; color:#565656; font-size:14px; font-weight: 400;}
  
 /*********************** 초기화 *************************/
+*,::after,::before{box-sizing: border-box;}
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
 abbr, address, cite, code, dfn, em, img, small, strong, sub, sup, b, i, dl, dt, dd, ol, ul, li, a,
 fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,
-mark, audio, video { margin: 0; padding: 0; border: 0; outline :0; font-size: 100%; vertical-align: baseline; background: transparent;}
+mark, audio, video { margin: 0; padding: 0; border: 0; outline :0; vertical-align: baseline; background: transparent;}
 
 html { height: 100%; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none; color: #323c46;}
 body { height: 100%; width: 100%; line-height: 1.5;}
@@ -104,7 +105,11 @@ textarea {color: #333; border: 1px solid #ddd;}
 .d-tbl { display: table; width: 100%; border-collapse: collapse; border-spacing: 0; table-layout: fixed; }
 .d-tbc { display: table-cell; width: auto; vertical-align: top; }
 .wa{width: auto !important;}
+
+.mt20{margin-top: 20px !important;}
+.mt32{margin-top: 32px !important;}
 .mt40{margin-top: 40px !important;}
+.pd20{padding: 0 20px;}
 
 /*아이폰 스크롤 바운스 없애기 : 모바일 코딩때는 때 꼭 넣고 시작*/
 html, body{position: fixed; overflow: hidden;}
