@@ -1,9 +1,104 @@
 $(function () {
   /***********************공통기능***********************/
-  //클릭시 on 토글(체크박스 등)
-  $(document).on("click", ".js_on", function () {
-    $(this).toggleClass("on");
-  });
+  //페이지가 나타나는 애니메이션 : .js_page_ani 클릭시 애니메이션이 될 페이지 영역에 .page_ani_01를 붙여줌
+  $(".js_page_ani").bind("click", function () {
+    $('.page_ani_wrap').addClass("page_ani_01")
+  })
+
+   //더해질 숫자로 카운트하는 기능(반드시 말줄임표 기능의 스크립트보다 먼저 실행돼야 함)
+  $(".js_plus_count").each(function () {
+
+    //카운트 기능
+    let $txt = $(this).text()
+    let regex = /[^0-9]/g
+    let num = parseInt($txt.replace(regex, ""))
+    let plus_num = 1000 //더해질 숫자
+    let total = num + plus_num
+    let time = 2000 / plus_num //카운트 될 총 시간이 1초인 경우 1000을 넣는다
+    counterFn()
+    function counterFn(){
+      id0 = setInterval(count0Fn, time)
+      function count0Fn(){
+        num += 10 //카운트시에 계속 더해질 숫자
+        cnt = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") //천단위씩 콤마 처리
+        if(num > total){
+          clearInterval(id0)
+        }else{
+          $('.js_plus_count').text(cnt)
+          ellipsis_Fn()
+        }
+      }
+    }
+
+    //카운트되기 전에 미리 숫자 공간 확보
+    $(this).text(total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))
+    ellipsis_Fn()
+    let $my_box = $('.home_header .my_box')
+    let box_width = $my_box.outerWidth()
+    $my_box.css({'width' : box_width + 'px'})
+    let $my_point = $('.home_header .point')
+    let my_point_width = $my_point.outerWidth()
+    $my_point.css({'width' : my_point_width + 'px'})
+  })
+  
+  //십만단위 초과인 경우 말줄임표 나오는 스크립트(홈 헤더 등)
+  ellipsis_Fn()
+  function ellipsis_Fn(){
+    $(".js_ellipsis_100000").each(function () {
+      const $num = $(this).text()
+      const $length = $num.length
+      if($length > 7){
+        new_num = $num.substr(0, 6)
+        $(this).text(new_num + '...')
+      }
+    })
+  }
+
+  //일정 시간마다 반복해서 on을 붙여주는 기능(척도2 시작하기 등)
+  $(".js_time_on").each(function () {
+    let time = 1800 //반복 시간
+    let $box = $('.js_time_on article')
+    let total = $box.length
+    let i = 1
+    onFn()
+    function onFn(){
+      setInterval(count0Fn, time)
+      function count0Fn(){
+        $box.removeClass('on')
+        $box.eq(i).addClass('on')
+        i ++
+        if(i >= total){
+          i = 0
+        }
+      }
+    }
+  })
+
+
+
+
+
+
+
+  
+
+  /************************각 페이지별 기능***********************/
+  // 해당 영역의 사이즈 유지
+  $('.js_size').each(function(){
+    let $this = $(this)
+    let width = $this.outerWidth()
+    let height = $this.outerHeight()
+    $this.css({'width' : width + 'px', 'height' : height + 'px'})
+  })
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13,7 +108,10 @@ $(function () {
   
 
 
-
+  //클릭시 on 토글(체크박스 등)
+  $(document).on("click", ".js_on", function () {
+    $(this).toggleClass("on");
+  });
 
   //탭기능(일반적인 탭)
   $(".js_tabs1 > li").bind("click", function () {
