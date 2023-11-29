@@ -237,7 +237,7 @@ button.kakao{background-image: url(../../images/icon/logo=kakao.svg); background
 .survey2_type_2 .priority_wrap article .inner::before{display: block; content: '끌어서 넣기'; border: 1px dashed #DCDCDC; border-radius: 8px; padding: 12px 20px; line-height: 20px; font-weight: 500; color: #DCDCDC; background: #fff;}
 .survey2_type_2 .obj_wrap{margin-top: 9px; position: relative;}
 .draggable_box{display: inline-block; margin-top: 8px; margin-right: 8px; padding: 12px 20px; line-height: 20px; font-weight: 500; border: 1px solid #EBEBEB; border-radius: 8px; background: #fff;}
-.draggable_box.blank{position: absolute; margin: 0; width: 100%; height: 120px; right: 0px; top: 0; background: transparent; border: 0;}
+.draggable_box.blank{position: absolute; margin: 0; width: 100%; height: 120px; right: 0px; top: 0; background: #f00; border: 0;}
 .survey2_type_2 .priority_wrap article .draggable_box{margin: 0; border-color: #F5822C; background: #FEF6F0; max-width: 104px;}
 .survey2_type_2 .priority_wrap article .draggable_box.blank{border: 1px dashed #DCDCDC; border-radius: 8px; padding: 12px 20px; line-height: 20px; font-weight: 500; color: #DCDCDC; background: #fff; position: static; width: auto; height: auto; max-width: 100%;}
 .survey2_type_2 .priority_wrap article .draggable_box.blank::after{content: '끌어서 넣기';}
