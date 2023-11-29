@@ -88,7 +88,7 @@ $(function () {
   })
 
   // 상자를 버리기 위한 하단의 빈공간 만들기와 삭제하기(척도2 설문 타입2)
-  $(document).on("mouseleave", ".priority_wrap", function () {
+  $(document).on("touchmove", ".priority_wrap", function () {
     $('.priority_wrap').find('.blank').parent().html('<div class="inner draggable-source"></div>')
     $('.obj_wrap').append('<div class="draggable_box blank draggable-source"></div>')
     setTimeout(function() {
