@@ -76,19 +76,24 @@ $(function () {
 
 
 
-
-
-
-
-  
+ 
 
   /************************각 페이지별 기능***********************/
-  // 해당 영역의 사이즈 유지
+  // 해당 영역의 사이즈 유지(척도2 설문 타입2)
   $('.js_size').each(function(){
     let $this = $(this)
     let width = $this.outerWidth()
     let height = $this.outerHeight()
     $this.css({'width' : width + 'px', 'height' : height + 'px'})
+  })
+
+  // 상자를 버리기 위한 하단의 빈공간 만들기와 삭제하기(척도2 설문 타입2)
+  $(document).on("mouseleave", ".priority_wrap", function () {
+    $('.priority_wrap').find('.blank').parent().html('<div class="inner draggable-source"></div>')
+    $('.obj_wrap').append('<div class="draggable_box blank draggable-source"></div>')
+    setTimeout(function() {
+      $('.obj_wrap').find('.blank').hide();
+    }, 500);
   })
 
 
@@ -100,12 +105,6 @@ $(function () {
 
 
 
-
-
-
-
-
-  
 
 
   //클릭시 on 토글(체크박스 등)
